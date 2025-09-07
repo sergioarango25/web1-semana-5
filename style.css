@@ -1,0 +1,108 @@
+/*
+
+BEM
+BLOCK__ELEMENT--MODIFIER
+
+¿Que es BEM?
+BEM es una metodología para nombrar clases en CSS que
+facilita la creación de componentes reutilizables y el
+mantenimiento del código. BEM significa Bloque, Elemento,
+Modificador.
+
+¿Cómo se define?
+- Bloque: Es el contenedor principal o componente independiente.
+- Elemento: Es una parte del bloque que tiene una función específica.
+- Modificador: Es una variación del bloque o elemento que cambia su apariencia o comportamiento.
+Ejemplo:
+.boton { }
+.boton__icono { } /* Elemento
+.boton__icono--highlight { } /* Modificador
+
+Beneficios:
+- Claridad: Facilita la comprensión de la estructura del HTML y CSS.
+- Reutilización: Permite crear componentes que se pueden reutilizar en diferentes partes del proyecto.
+- Mantenimiento: Hace que el código sea más fácil de mantener y actualizar.
+- Evita conflictos: Reduce la probabilidad de conflictos de nombres en CSS.
+- Escalabilidad: Facilita la expansión del proyecto sin complicar la estructura del código.
+
+*/
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+
+body.site {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Bloque layout */
+
+.layout {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 10vh 1fr 10vh;
+}
+.layout__header {
+  background: lightgreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.layout__title {
+  margin: 0;
+  font-size: medium;
+}
+
+.layout__footer {
+  background: lightskyblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.layout__footer-text {
+  margin: 0;
+}
+
+.layout__main {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  min-height: 0;
+}
+
+/* bloque nav */
+
+.nav {
+  background: lightsalmon;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: auto;
+}
+
+.nav__link {
+  text-decoration: none;
+  padding: 8px 16px;
+}
+
+.nav__link:hover,
+.nav__link--active {
+  background: lightyellow;
+}
+
+/* bloque content */
+.content {
+  background: lightpink;
+  padding: 16px;
+  overflow: auto;
+  min-height: 0;
+}
